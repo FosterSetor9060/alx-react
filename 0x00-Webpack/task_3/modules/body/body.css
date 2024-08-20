@@ -1,6 +1,5 @@
-
-#count {
-  display: inline;
+button {
   font-weight: bold;
+  float: right;
 }
 

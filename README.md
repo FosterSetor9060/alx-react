@@ -1,7 +1,6 @@
 0x05. React State
-Front-end Specialization
 Overview
-In the “0x05. React State” project, we’ll dive into managing state within React components. Understanding state and its lifecycle is crucial for building interactive and dynamic user interfaces. By the end of this project, you’ll be able to explain key concepts related to state, lifecycle, controlled components, and React Hooks.
+The “0x05. React State” project focuses on managing state within React components. Understanding state and its lifecycle is crucial for building interactive and dynamic user interfaces. By the end of this project, you’ll be able to explain key concepts related to state, lifecycle, controlled components, and React Hooks.
 
 Learning Objectives
 By completing this project, you’ll be able to explain the following topics without relying on external resources:
@@ -34,28 +33,20 @@ General:
 Allowed editors: vi, vim, emacs, Visual Studio Code
 All your files will be interpreted/compiled on Ubuntu 18.04 LTS using Node 12.x.x and npm 6.x.x
 All your files should end with a new line
+The first line of all your files should be exactly #!/usr/bin/node
 A README.md file, at the root of the project folder, is mandatory
 Tasks
 0. Adding a Local State for Notifications
 Modify the App component in task_0/dashboard/src/App/App.js:
 Create a local state to store a displayDrawer element:
 Define the default state for the state in the constructor of the class.
-Create a function named handleDisplayDrawer that will change the value of displayDrawer to true.
-Create a function named handleHideDrawer that will change the value of displayDrawer to false.
+Create functions named handleDisplayDrawer and handleHideDrawer to update the state.
 Modify the Notifications import in task_0/dashboard/src/App/App.js:
-Pass to the component the prop displayDrawer using the local state.
+Pass the prop displayDrawer using the local state.
 Pass the new functions handleDisplayDrawer and handleHideDrawer.
 Modify the App test suite in task_0/dashboard/src/App/App.test.js:
-Add a test to verify that the default state for displayDrawer is false. Verify that after calling handleDisplayDrawer, the state should now be true.
-Add a test to verify that after calling handleHideDrawer, the state is updated to be false.
+Add tests to verify the default state for displayDrawer and the behavior after calling the functions.
 Modify the Notifications component in task_0/dashboard/src/Notifications/Notifications.js:
-Define the propTypes and the defaultProps for the new props.
-When clicking on “Your notifications,” call handleDisplayDrawer.
-When clicking on the close button, call handleHideDrawer.
+Define the propTypes and defaultProps for the new props.
+Implement the behavior for clicking on “Your notifications” and the close button.
 Modify the Notifications test suite in task_0/dashboard/src/Notifications/Notifications.test.js:
-Add a test to verify that clicking on the menu item calls handleDisplayDrawer.
-Add a test to verify that clicking on the button calls handleHideDrawer.
-Tips:
-Remember that you implemented shouldComponentUpdate. You will need to modify the logic to allow the component to rerender when the prop displayDrawer changes.
-Use setState and instance when creating tests with Enzyme.
-Remember to use spies to verify if a function is being called. You can pass a spy as a property.
